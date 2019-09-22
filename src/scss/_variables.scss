@@ -1,0 +1,43 @@
+/* --------- fonts starts ---------- */
+$primaryFont: 'Crimson Text','Open Sans', Arial, sans-serif;
+/* --------- fonts ends ---------- */
+
+/* ---------- custom variables starts ---------- */
+$containerWidth: 120rem;
+/* ---------- custom variables ends ---------- */
+
+/* ---------- color starts ---------- */
+//Foreground
+$primaryColor:#231f20;
+$secondaryColor1:#e84f36;
+$secondaryColor2:#000000;
+$secondaryColor3:#ffffff;
+$secondaryColor4:#ededed;
+$secondaryColor5:#3c3c3b;
+$secondaryColor6:#279ecd;
+
+//Background
+$primaryBgColor:#ffffff;
+$secondaryBgColor1:#dcdcdc;
+$secondaryBgColor2:#eaeaea;
+$secondaryBgColor3:#e2e2e2;
+$secondaryBgColor4: #c3c3c3;
+/* ---------- color ends ---------- */
+
+
+/* ---------- animation starts ---------- */
+$transition1: all .2s ease-out;
+$transition2: all .5s ease-in;
+$transition3: opacity .5s ease-out;
+$transition4: all 0.3s ease;
+$transition5: all 1s ease-out;
+$transition6:  opacity 1000ms;
+/* ---------- animation ends ---------- */
+
+
+/* ---------- media queries starts ---------- */
+$tabletLandscapeWidth:1024px;
+$tabletMidWidth:991px;
+$tabletPotraitWidth: 768px;
+$mobileLandscapeWidth: 767px;
+/* ---------- media queries ends ---------- */

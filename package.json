@@ -1,0 +1,16 @@
+{
+  "name": "project-template",
+  "version": "1.0.0",
+  "description": "It is going to be the starting point for my all projects",
+  "author": "tripathishashikant",
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "bootstrap": "^4.3.1",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify-es": "^1.0.4"
+  },
+  "dependencies": {}
+}
