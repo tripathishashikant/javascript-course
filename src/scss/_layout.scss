@@ -1,6 +1,10 @@
 /* ---------- header starts ---------- */
 .header {
 
+  &__logo {
+    padding: 2rem 0;
+  }
+
   &__menu {
     flex: 0 1 auto;
   }
@@ -15,64 +19,21 @@
     &__mobile {
       display: block;
     }
-
     &__menu {
       flex: 1 1 100%;
     }
   }
 
 }
-
-
 /* ---------- header ends ---------- */
-
 
 /* ---------- footer starts ---------- */
 .footer {
 
-  &__menu {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-end;
-    align-items: baseline;
-    align-content: center;
-
-    &__item {
-      flex: 0 1 auto;
-      padding: 0 2.7rem 0 0;
-
-      &:last-child {
-        padding-right: 0;
-      }
-    }
-
+  &__copyright {
+    padding: 2rem 0 1.6rem;
+    @include background-opacity($primaryBgColor, 0.7);
   }
 
-  @media all and (min-width: $tabletPotraitWidth) and (max-width: $tabletMidWidth) {
-
-    &__menu {
-      justify-content: flex-start;
-    }
-
-  }
-
-  @media all and (max-width: $mobileLandscapeWidth) {
-
-    &__menu {
-      flex-flow: row wrap;
-      justify-content: center;
-
-      &__item {
-        flex: 0 0 auto;
-        padding: 0 1rem 1rem;
-      }
-    }
-
-  }
 }
-
 /* ---------- footer ends ---------- */

@@ -42,9 +42,7 @@
               }
               if (callFlag > z.length) {
                 setTimeout(function(){
-                  $('body').css({
-                    'background-image': 'none',
-                  });
+                  $('body').removeClass('loading');
                   $('.page').animate({
                     'opacity': '1'
                   }, 1000);
@@ -86,7 +84,7 @@
   /* ---------- remove home link starts ---------- */
   function removeHomeLink() {
     if ($('body').hasClass('homepage')) {
-      $('.logo__image').unwrap();
+      $('.logo__title span').unwrap();
     }
   }
   /* ---------- remove home link ends ---------- */
