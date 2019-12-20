@@ -121,3 +121,13 @@
   /* ---------- load ends ---------- */
 
 })(jQuery);
+
+/* ---------- Video starts ---------- */
+document.addEventListener("DOMContentLoaded", function(event) {
+var x = document.getElementById('myVideo');
+document.getElementById('playBtn').addEventListener('click', playVideo);
+function playVideo() {
+  x.play();
+}
+});
+/* ---------- Video ends ---------- */
