@@ -122,12 +122,70 @@
 
 })(jQuery);
 
-/* ---------- Video starts ---------- */
+/* ---------- javascript DOM loaded starts ---------- */
 document.addEventListener("DOMContentLoaded", function(event) {
-var x = document.getElementById('myVideo');
-document.getElementById('playBtn').addEventListener('click', playVideo);
-function playVideo() {
-  x.play();
-}
+
+  const v = document.getElementById('myVideo');
+
+  /* ----------- video play starts ------------ */
+  document.getElementById('btnPlayPause').addEventListener('click', playPauseVideo);
+  function playPauseVideo() {
+    if(v.paused === true) {
+      v.play();
+      this.innerHTML = 'Paused';
+    } else {
+      v.pause();
+      this.innerHTML = "Play"
+    }
+  }  
+  /* ----------- video play ends ------------ */
+
+  /* ----------- video seekbar starts ------------ */
+  document.getElementById('seekBar').addEventListener('change', seekBarVideo);
+  function seekBarVideo() {
+    let newTime = v.duration * (this.value / 100);
+    v.currentTime = newTime;
+  }
+
+  v.addEventListener('timeupdate', updateSeekBar);
+  function updateSeekBar() {
+    let curTime = (100 / v.duration) * v.currentTime;
+    document.getElementById('seekBar').value = curTime;
+  }
+  /* ----------- video seekbar ends ------------ */
+
+  /* ----------- video volume bar starts ------------ */
+  document.getElementById('btnMuteUnmute').addEventListener('click', muteUnmuteVideo);
+  function muteUnmuteVideo() {
+    if(v.muted === false) {
+      v.muted = true;
+      this.innerHTML = "Unmute";
+    } else {
+      v.muted = false;
+      this.innerHTML = "Mute";
+    }
+  }
+  /* ----------- video volume bar ends ------------ */
+
+  /* ----------- video volume bar starts ------------ */
+  document.getElementById('volumeBar').addEventListener('change', volumeBarVideo);
+  function volumeBarVideo() {
+    v.volume = this.value;
+  }
+  /* ----------- video volume bar ends ------------ */
+
+  /* ----------- video full screen starts ------------ */
+  document.getElementById('btnFullScreen').addEventListener('click', FullScreenVideo);
+  function FullScreenVideo() {
+    if(v.requestFullscreen) {
+      v.requestFullscreen();
+    } else if(v.mozRequestFullScreen) {
+      v.mozRequestFullScreen();
+    }else if(v.webkitRequestFullscreen) {
+      v.webkitRequestFullscreen();
+    }
+  }
+  /* ----------- video full screen ends ------------ */
+
 });
-/* ---------- Video ends ---------- */
+/* ---------- javascript DOM loaded ends ---------- */

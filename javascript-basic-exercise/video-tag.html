@@ -91,7 +91,11 @@
               </video>
             </section>
             <section class="video__controls">
-              <button id="playBtn" class="video__play">Play</button>
+              <button id="btnPlayPause" class="video__playPause">Play</button>
+              <input type="range" id="seekBar" class="video__seekBar" value="0">
+              <button id="btnMuteUnmute" class="video__muteUnmute">Mute</button>
+              <input type="range" id="volumeBar" class="volumeBar" min="0" max="1" step="0.1" value="1">
+              <button id="btnFullScreen" class="video__fullScreen">Full Screen</button>
             </section>
           </section>
         </article>
